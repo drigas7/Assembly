@@ -1,3 +1,4 @@
+; Veryfing given boolean expression	
 	.include "/home/ps_1337/assembly/m328pdef.inc"
 
 SBI DDRD, 7 ; SET PIN 13 as OUPUT WHICH IS OUTPUT F
