@@ -53,3 +53,4 @@ BLT r23, 0; result pushed in r23
 COM r23; for POS 0 gives HIGH
 out PORTD, r23
 
+rjmp loop ; runs in a loop 
