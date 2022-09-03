@@ -48,7 +48,8 @@ AND r23,r21
 AND r23,r20
 
 BST r23, 0; result grabbed
-ldi r23,0x00
+ldi r23,0xFF
 BLT r23, 0; result pushed in r23
+COM r23; for POS 0 gives HIGH
 out PORTD, r23
 
