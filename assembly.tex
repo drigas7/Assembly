@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[document]{ragged2e}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\author{By Pranjal Singh}
+\title{FWC-1 Assignment -1 }
+\date{August 2022}
+\begin{document}
+
+\maketitle % <==========================================================
+
+
+
+
+\section*{Question}
+Derive a Canonical POS expression for a Boolean function  F, represented by the following truth table :
+\\
+\vspace{10px}
+\begin{tabularx}{0.8\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X | 
+  | >{\centering\arraybackslash}X |
+  }
+ \hline
+ P & Q & R & F(P,  Q,  R) \\
+ \hline
+ 0  & 0  & 0 & 0  \\
+\hline
+0  & 0  & 1 & 1  \\
+\hline
+0  & 1  & 0 & 1  \\
+\hline
+0  & 1  & 1 & 0  \\
+\hline
+1  & 0  & 0 & 0  \\
+\hline
+1  & 0  & 1 & 0  \\
+\hline
+1  & 1  & 0 & 1  \\
+\hline
+1  & 1  & 1 & 1  \\
+\hline
+\end{tabularx}
+
+\section*{Solution}
+\subsection*{Canonical Product Of Sum expression}
+\paragraph{Canonical PoS form means Canonical Product of Sums form. In this form, each sum term contains all literals. So, these sum terms are nothing but the Max terms. Hence, canonical PoS form is also called as product of Max terms form.
+First, identify the Max terms for which, the output variable is zero and then do the logical AND of those Max terms in order to get the Boolean expression function corresponding to that output variable. This Boolean function will be in the form of product of Max terms.
+Follow the same procedure for other output variables also, if there is more than one output variable.}
+
+\subsection*{Boolean Algebric Expression}
+F= Π P,Q,R(0,3,4,5)= (P+Q+R)*(P+Q'+R')*(P'+Q+R)*(P'+Q+R')
+is the canonical POS form for the given Boolean function.
+\vspace{40px}
+\\
+\subsection*{Verifying through Arduino}
+\subsubsection*{Components used}
+\vspace{10px}
+\begin{tabularx}{0.8\textwidth} { 
+  | >{\centering\arraybackslash}X | 
+  | >{\centering\arraybackslash}X  |
+  }
+ \hline
+ Component Name & Number of components \\
+ \hline
+ Arduino Uno  & 1  \\
+\hline
+Jumper Wires  & 6  \\
+\hline
+Breadboard  & 1 \\
+\hline
+\end{tabularx}
+\subsubsection*{Procedure}
+\paragraph{Pin 13 of Arduino UNO is OUTPUT to INPUT Pins 2,3 and 4 which represent P,Q,R in corresponding order. Individually connect each INPUT pin to power pin of the board or to ground depending on whether 0 or 1 is required as according to the truth table.Use Breadboard as needed. ON led represents OUTPUT S as 0 while OFF represents OUTPUT S as 1. Execute the given code. }
+\subsection*{Coding}
+\paragraph{ASSEMBLY Code can be found \href {https://raw.githubusercontent.com/drigas7/Assembly/main/hello.asm}{HERE}
+}
+\begin{Center}
+\mbox{}
+\vfill
+\fbox{\begin{minipage}{24em}
+https://github.com/drigas7/Assembly
+\end{minipage}}
+\end{Center}
+\end{document}
