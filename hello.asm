@@ -7,7 +7,7 @@ CBI DDRD, 1 ; DIGITAL PIN 1 AS INPUT WHICH IS INPUT Q
 CBI DDRD, 2 ; DIGITAL PIN 2 AS INPUT WHICH IS INPUT R 
 
 start:
-ldi r16,PIND ; R16= 0000 0RQP
+ldi r16,PIND ;
 BST r16, 0; P grabbed 
 BLD r17, 0; P pushed in r17
 BST r16, 1; Q grabbed 
